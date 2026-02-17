@@ -33,3 +33,16 @@ dist/
 .idea/dictionaries
 .idea/libraries
 .idea/caches
+
+# Python / MCP
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+

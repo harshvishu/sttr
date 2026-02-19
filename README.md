@@ -290,6 +290,35 @@ echo "Hello World" | sttr base64-encode | sttr md5
 - [x] **zeropad** - Pad a number with zeros
 - [x] **and adding more...**
 
+## MCP Server (sttr-mcp)
+
+This repository includes an **MCP (Model Context Protocol) server** that exposes `sttr` as a tool for AI clients such as OpenCode or Claude.
+
+### What it does
+The MCP server wraps the `sttr` CLI and allows models to perform text transformations
+(case changes, encoding/decoding, hashing, JSON/YAML conversion, etc.) via structured tool calls.
+
+The CLI itself remains unchanged. The MCP server is an adapter layer.
+
+### Location
+sttr-mcp/
+
+
+### Usage
+End users do **not** run this manually.
+
+When configured in an MCP-compatible client, the server is started automatically
+and provides a single tool that maps to:
+
+### Distribution
+The MCP server is designed to be distributed via **Smithery** (zero-install for users).
+Local execution is intended only for development and testing.
+
+### Notes
+- The MCP server uses stdio (no ports, no HTTP)
+- No changes to the core `sttr` CLI behavior
+- The MCP server is optional and does not affect normal `sttr` usage
+
 # Featured On
 
 These are the few locations where `sttr` was highlighted, many thanks to all of you. 
